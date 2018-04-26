@@ -1,6 +1,6 @@
 <?php
 
-use App\Transaction;
+use App\{ User, Transaction, Buyer, Seller };
 use Faker\Generator as Faker;
 
 $factory->define(Transaction::class, function (Faker $faker) {
@@ -10,7 +10,7 @@ $factory->define(Transaction::class, function (Faker $faker) {
 
     return [
         'quantity' => $faker->numberBetween(1,3),
-        'seller_id' => $buyer->id,
+        'buyer_id' => $buyer->id,
         'product_id' => $seller->products->random()->id
         // User::inRandomOrder()->first()->id
     ];
