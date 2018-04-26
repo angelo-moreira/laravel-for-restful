@@ -18,4 +18,4 @@ Route::resource('categories', 'Category\CategoryController', ['except' => ['crea
 Route::resource('products', 'Product\ProductController', ['only' => ['index', 'show']]);
 Route::resource('sellers', 'Seller\SellerController', ['only' => ['index', 'show']]);
 Route::resource('transactions', 'Transaction\TransactionController', ['only' => ['index', 'show']]);
-Route::resource('users', 'User\UserController', ['expect' => ['create', 'edit']]);
+Route::resource('users', 'User\UserController', ['except' => ['create', 'edit']]);
